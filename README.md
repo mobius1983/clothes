@@ -1,1 +1,1 @@
-# clothes
+# promotions

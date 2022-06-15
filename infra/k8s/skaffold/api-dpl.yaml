@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: clothes-api-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: clothes-api-depl
+  template:
+    metadata:
+      labels:
+        app: clothes-api-depl
+    spec:
+      containers:
+        - image: rludena/clothes_api
+          name: clothes-api-depl
+          env:
+            - name: NODE_ENV
+              value: "development"
+            - name: PORT
+              value: "8082"
+            - name: DB_NAME
+              value: clothes
+            - name: DB_USER
+              value: "postgres"
+            - name: DB_PASSWORD
+              value: "postgres"
+            - name: DB_HOST
+              value: "192.168.18.12"
+            - name: DB_DRIVER
+              value: "postgres"
+            - name: DB_PORT
+              value: "5432"

@@ -1,0 +1,13 @@
+.env
+node_modules/*
+.idea/*
+log/*
+public/uploads/original/*
+!public/uploads/original/.gitkeep
+public/uploads/thumbnail/*
+!public/uploads/thumbnail/.gitkeep
+public/uploads/files/*
+!public/uploads/files/.gitkeep
+package-lock.json
+sessions/*
+data/*

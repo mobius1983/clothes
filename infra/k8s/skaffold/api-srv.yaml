@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: clothes-api-srv
+  labels:
+    app: clothes-api-srv
+spec:
+  selector:
+    app: clothes-api-depl
+  ports:
+    - protocol: TCP
+      port: 8082
+      targetPort: 8082
